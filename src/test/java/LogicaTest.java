@@ -1,12 +1,21 @@
 import org.apache.juli.logging.Log;
 import org.example.Logica;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LogicaTest {
+
+    @Autowired
+    private Logica logic;
+    @Before //Con esta anotacion ejecutamos primero que todo!
+    public void before(){
+        logic = new Logica();
+    }
 
     @Test
     public void testeandoLista(){
@@ -18,8 +27,6 @@ public class LogicaTest {
 
     @Test
     public void cuando_es_multiplode_3_devuelve_fizz(){
-
-        Logica logic = new Logica();
 
         List<String> lista = logic.fizzBuzz();
 
