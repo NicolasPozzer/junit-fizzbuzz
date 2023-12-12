@@ -23,8 +23,11 @@ public class LogicaTest {
 
         List<String> lista = logic.fizzBuzz();
 
-        Assert.assertEquals("Fizz", lista.get(2));
-        Assert.assertEquals("Fizz", lista.get(5));
+        Assert.assertEquals("Fizz", lista.get(3));
+        Assert.assertEquals("Fizz", lista.get(6));
+        Assert.assertEquals("Buzz",lista.get(5));
+        Assert.assertEquals("FizzBuzz", lista.get(15));
+
     }
 
 }

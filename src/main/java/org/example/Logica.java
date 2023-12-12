@@ -21,7 +21,7 @@ public class Logica {
 
         List<String> lista = new ArrayList<>();
 
-        for (int i = 1; i <= 100; i++){
+        for (int i = 0; i <= 100; i++){
 
             if (i % 3 == 0 && i % 5 == 0){
                 lista.add("FizzBuzz");
