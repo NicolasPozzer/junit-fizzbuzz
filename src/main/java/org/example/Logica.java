@@ -1,6 +1,5 @@
 package org.example;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,22 +17,28 @@ public class Logica {
     /* del 0 al 100 cuando es multiplo de 3 dice -> Fizz y cuando es
     * multiplo de 5 dice -> Buzz */
 
-    public void fizzBuzz(){
+    public List<String> fizzBuzz(){
 
-        for (int i = 0; i <= 99; i++){
+        List<String> lista = new ArrayList<>();
+
+        for (int i = 1; i <= 100; i++){
 
             if (i % 3 == 0 && i % 5 == 0){
-                System.out.println("Fizz");
+                lista.add("FizzBuzz");
+
             } else if (i % 3 == 0) {
-                System.out.println("Buzz");
+                lista.add("Fizz");
+
             } else if (i % 5 == 0) {
-                System.out.println("FizzBuzz");
+                lista.add("Buzz");
             }
             else {
-                System.out.println(i);
+                lista.add(String.valueOf(i));
             }
 
         }
+
+        return lista;
 
     }
 
